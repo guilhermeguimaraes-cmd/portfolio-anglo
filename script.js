@@ -1,5 +1,37 @@
+function abrir(opcao) {
+    var janela = document.getElementById("janela");
+    var titulo = document.getElementById("titulo");
+    var texto = document.getElementById("texto");
 
+    janela.style.display = "block";
+    titulo.innerHTML = opcao;
 
+    if (opcao == "Habilidades") {
+        texto.innerHTML = "Estamos aprendendo HTML, CSS e JavaScript.";
+    }
+    else if (opcao == "Sobre mim") {
+        texto.innerHTML = "Somos estudantes do Anglo e estamos aprendendo programação.";
+    }
+    else if (opcao == "Projetos") {
+        texto.innerHTML = "Aqui estão nossos projetos de programação.";
+    }
+    else if (opcao == "Contato") {
+        texto.innerHTML = "Entre em contato conosco para saber mais sobre nossos projetos.";
+    }
+    else if (opcao == "Leia-me") {
+        texto.innerHTML = "Bem-vindo ao portfólio do Anglo Codifica! Clique nos ícones para conhecer nosso trabalho.";
+    }
+    else if (opcao == "Início") {
+        texto.innerHTML = "Bem-vindo ao nosso portfólio!";
+    }
+}
+
+/* Fechar a janela */
+
+function fechar() {
+    document.getElementById("janela").style.display = "none";
+
+}
 /* Relógio */
 
 function atualizarRelogio() {
@@ -40,4 +72,3 @@ function atualizarRelogio() {
 atualizarRelogio();
 
 setInterval(atualizarRelogio, 1000);
-
