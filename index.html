@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglo Codifica</title>
+    <link rel="icon" href="logo_anglo.jpg" type="icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="desktop">
+
+        <!-- Ícone Habilidades -->
+
+        <div class="icone" onclick="abrir('Habilidades')">
+            <p class="emoji">💻</p>
+            <p class="nome-icone">Habilidades</p>
+        </div>
+
+        <!-- Ícone Sobre mim -->
+
+        <div class="icone" onclick="abrir('Sobre mim')">
+            <p class="emoji">📄</p>
+            <p class="nome-icone">Sobre mim</p>
+        </div>
+
+        <!-- Ícone Projetos -->
+
+        <div class="icone" onclick="abrir('Projetos')">
+            <p class="emoji">📁</p>
+            <p class="nome-icone">Projetos</p>
+        </div>
+
+        <!-- Ícone Contato -->
+
+        <div class="icone" onclick="abrir('Contato')">
+            <p class="emoji">✉️</p>
+            <p class="nome-icone">Contato</p>
+        </div>
+
+        <!-- Ícone Leia-me -->
+
+        <div class="icone" onclick="abrir('Leia-me')">
+            <p class="emoji">📃</p>
+            <p class="nome-icone">Leia-me</p>
+        </div>
+
+        <!-- Cartão de apresentação -->
+
+        <div class="aviso">
+            <h3>Olá! Nós somos o Codifica do Anglo!</h3>
+            <p>Estudantes de programação e tecnologia.</p>
+            <p>Clique nos ícones para nos conhecer!</p>
+        </div>
+
+        <!-- Janela que aparece ao clicar -->
+
+        <div id="janela" class="janela">
+            <button onclick="fechar()">X</button>
+            <h2 id="titulo"></h2>
+            <p id="texto"></p>
+        </div>
+
+        <div class="nome">ANGLO CODIFICA</div>
+
+    </div>
+
+    <!-- Barra inferior -->
+
+    <div class="barra">
+        <button onclick="abrir('Início')">⊞ Iniciar</button>
+        <p id="relogio"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+
+body {
+    margin: 0;
+    font-family: Oswald, sans-serif;
+}
+
+/* Fundo da área de trabalho */
+
+.desktop {
+    height: 92vh;
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("wallpaper-anglo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ícones */
+
+.icone {
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Emoji */
+
+.emoji {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+/* Nome abaixo do emoji */
+
+.nome-icone {
+    color: #f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Cartão de apresentação */
+
+.aviso {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 220px;
+    padding: 15px;
+    background-color: #DCEEFF;
+    color: #12345B;
+    border: 2px solid #12345B;
+    transform: rotate(-2deg);
+    box-sizing: border-box;
+}
+
+/* Janela do portfólio */
+
+.janela {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    min-height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F4F9FF;
+    color: #12345B;
+    border: 2px solid #174A8B;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px #12345B;
+    z-index: 10;
+}
+
+.janela h2 {
+    margin-top: 10px;
+    color: #174A8B;
+}
+
+.janela p {
+    line-height: 1.5;
+}
+
+/* Botão de fechar */
+
+.janela button {
+    float: right;
+    cursor: pointer;
+    background-color: #174A8B;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* Nome no canto inferior */
+
+.nome {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px #12345B;
+}
+
+/* Barra inferior estilo Windows */
+
+.barra {
+    height: 8vh;
+    background-color: #12345B;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.barra button {
+    background-color: #2878BD;
+    color: white;
+    padding: 10px;
+    border: 2px solid #0A2342;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Relógio */
+
+#relogio {
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    background-color: #174A8B;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0;
+}
+
