@@ -1,7 +1,17 @@
+
 function abrir(opcao) {
+
     var janela = document.getElementById("janela");
     var titulo = document.getElementById("titulo");
     var texto = document.getElementById("texto");
+
+    if (opcao == "Sobre Nós") {
+    janela.style.display = "none";
+    document.getElementById("janelaSobre").style.display = "flex";
+    return;
+}
+
+    document.getElementById("janelaSobre").style.display = "none";
 
     janela.style.display = "block";
     titulo.innerHTML = opcao;
@@ -30,11 +40,18 @@ function abrir(opcao) {
 
 function fechar() {
     document.getElementById("janela").style.display = "none";
-
 }
+
+/* Fechar janela Sobre Nós */
+
+function fecharSobre() {
+    document.getElementById("janelaSobre").style.display = "none";
+}
+
 /* Relógio */
 
 function atualizarRelogio() {
+
     var agora = new Date();
 
     var horas = agora.getHours();

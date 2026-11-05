@@ -8,8 +8,8 @@
     <link rel="icon" href="logo_anglo.jpg" type="icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -24,9 +24,11 @@
 
         <!-- Ícone Sobre mim -->
 
-        <div class="icone" onclick="abrir('Sobre mim')">
-            <p class="emoji">📄</p>
-            <p class="nome-icone">Sobre mim</p>
+       <!-- Ícone Sobre Nós -->
+
+        <div class="icone" onclick="abrir('Sobre Nós')">
+             <p class="emoji">📄</p>
+             <p class="nome-icone">Sobre Nós</p>
         </div>
 
         <!-- Ícone Projetos -->
@@ -58,12 +60,170 @@
             <p>Clique nos ícones para nos conhecer!</p>
         </div>
 
-        <!-- Janela que aparece ao clicar -->
+        <!-- Janela original do portfólio -->
 
         <div id="janela" class="janela">
             <button onclick="fechar()">X</button>
             <h2 id="titulo"></h2>
             <p id="texto"></p>
+        </div>
+
+        <!-- Nova janela SOBRE NÓS -->
+
+        <div id="janelaSobre" class="janela-sobre">
+
+            <div class="conteudo-sobre">
+
+                <button class="fechar-sobre" onclick="fecharSobre()">X</button>
+
+                <div class="cabecalho">
+
+                    <div class="SobreNos">
+                        <h3 class="subtitulo">SOBRE NÓS</h3>
+                        <h1>Nossa turma do Codifica.</h1>
+
+                        <p>
+                            Alunos de diferentes turmas que, juntos, construíram uma
+                            relação de amizade, respeito e colaboração.
+                        </p>
+
+                        <p>
+                            Somos diferentes, mas compartilhamos o mesmo propósito:
+                            aprender, crescer e construir algo juntos.
+                        </p>
+                    </div>
+
+                    <div class="QuemSomos">
+                        <h4>QUEM SOMOS</h4>
+
+                        <h2>Diferentes ideias, um só time</h2>
+
+                        <p>
+                            Nossa turma se destaca pela união, pela troca de ideias e
+                            pela disposição em ajudar uns aos outros. Mesmo com nossas
+                            diferenças, aprendemos que trabalhar em equipe torna tudo
+                            mais fácil e divertido.
+                        </p>
+
+                        <p>
+                            O Codifica é muito mais do que aprender programação: é um
+                            espaço de criatividade, amizade e crescimento, onde
+                            aprendemos com nossos erros e transformamos ideias em projetos.
+                        </p>
+
+                        <div class="valores">
+                            <span>União</span>
+                            <span>Respeito</span>
+                            <span>Criatividade</span>
+                            <span>Colaboração</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="NossaTrajetoria">
+                        <h4>NOSSA TRAJETÓRIA</h4>
+
+                        <h2>Uma etapa de cada vez</h2>
+
+                        <p>
+                            Dos primeiros jogos ao portfólio oficial, cada experiência
+                            ajudou a construir quem somos hoje.
+                        </p>
+                    </div>
+
+                    <div class="linhaTempo">
+
+                        <div class="etapa">
+                            <span class="numero">01</span>
+
+                            <div>
+                                <h4>O INÍCIO</h4>
+                                <h3>Primeiros passos com jogos</h3>
+
+                                <p>
+                                    No início do curso, nosso aprendizado foi focado no
+                                    desenvolvimento de jogos. Progredimos passo a passo,
+                                    conhecendo novas ferramentas e possibilidades, até
+                                    chegarmos à criação de um projeto final.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="etapa">
+                            <span class="numero">02</span>
+
+                            <div>
+                                <h4>EM PARALELO</h4>
+                                <h3>Do design aos sites</h3>
+
+                                <p>
+                                    Ao mesmo tempo, estudamos técnicas de design para dar
+                                    vida à identidade visual de uma marca. Com esse novo
+                                    olhar criativo, avançamos também para o desenvolvimento
+                                    de sites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="etapa">
+                            <span class="numero">03</span>
+
+                            <div>
+                                <h4>SEGUNDO SEMESTRE</h4>
+                                <h3>Conhecimentos que se encontram</h3>
+
+                                <p>
+                                    No segundo semestre, a oficina e a área de ênfase
+                                    uniram forças para expandir nossos conhecimentos.
+                                    Essa integração nos permitiu reunir a programação que
+                                    já dominávamos graças aos jogos aos conceitos de
+                                    design aprendidos na criação dos sites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="etapa">
+                            <span class="numero">04</span>
+
+                            <div>
+                                <h4>NOVO CAPÍTULO</h4>
+                                <h3>O portfólio da turma</h3>
+
+                                <p>
+                                    Com toda essa bagagem combinada, iniciamos o
+                                    desenvolvimento do portfólio oficial da turma:
+                                    um projeto que representa nossa trajetória, nossos
+                                    aprendizados e tudo o que somos capazes de criar juntos.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="Orientadores">
+                        <h4>QUEM NOS ORIENTA</h4>
+
+                        <h2>Brenda Charão e Guilherme Guimarães</h2>
+
+                        <p>
+                            Contamos com o apoio dos professores, que nos orientam,
+                            ensinam e incentivam a superar dificuldades e descobrir
+                            novas possibilidades.
+                        </p>
+                    </div>
+
+                    <div class="MensagemFinal">
+                        <h2>
+                            “Somos alunos diferentes, unidos pelo mesmo propósito:
+                            aprender, crescer e construir algo juntos.”
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="nome">ANGLO CODIFICA</div>

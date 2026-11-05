@@ -147,13 +147,228 @@ body {
     margin: 0;
 }
 
-
-.botaoicone3{
+.botaoicone3 {
     background-color: transparent;
     border-color: transparent;
 }
 
-.botaoemoji3{
+.botaoemoji3 {
     background-color: transparent;
     border-color: transparent;
+}
+
+
+/* ================================= */
+/* ADIÇÃO: JANELA SOBRE NÓS           */
+/* ================================= */
+
+.janela-sobre {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(5, 15, 30, 0.85);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.conteudo-sobre {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #0b1d35, #173b60);
+    border: 2px solid #3989a5;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+    color: #ffffff;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.fechar-sobre {
+    position: sticky;
+    top: 0;
+    float: right;
+    background-color: #174A8B;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 2;
+}
+
+/* Cabeçalho */
+
+.conteudo-sobre .cabecalho {
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    position: relative;
+    overflow: visible;
+}
+
+.conteudo-sobre .SobreNos {
+    margin-bottom: 45px;
+}
+
+.conteudo-sobre .subtitulo {
+    color: #65d8f0;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.conteudo-sobre .SobreNos h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.conteudo-sobre .cabecalho p {
+    color: #dce8f5;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 950px;
+    margin-bottom: 18px;
+}
+
+.conteudo-sobre .cabecalho h4 {
+    color: #65d8f0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.conteudo-sobre .cabecalho h2 {
+    font-size: 29px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.conteudo-sobre .cabecalho h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+/* Divisórias */
+
+.conteudo-sobre hr {
+    border: none;
+    border-top: 1px solid #385574;
+    margin: 38px 0;
+}
+
+/* Quem somos */
+
+.conteudo-sobre .QuemSomos {
+    margin-bottom: 35px;
+}
+
+/* Valores */
+
+.conteudo-sobre .valores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.conteudo-sobre .valores span {
+    color: #dff8ff;
+    background-color: #204768;
+    border: 1px solid #3989a5;
+    border-radius: 25px;
+    padding: 11px 22px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.conteudo-sobre .valores span:hover {
+    background-color: #327d9b;
+    color: #ffffff;
+}
+
+/* Linha do tempo */
+
+.conteudo-sobre .NossaTrajetoria {
+    margin-bottom: 35px;
+}
+
+.conteudo-sobre .linhaTempo {
+    margin: 30px 0 45px 10px;
+    border-left: 2px solid #3989a5;
+}
+
+.conteudo-sobre .etapa {
+    display: flex;
+    gap: 22px;
+    padding: 0 0 35px 25px;
+    position: relative;
+}
+
+/* Números */
+
+.conteudo-sobre .numero {
+    color: #65d8f0;
+    border: 1px solid #3989a5;
+    border-radius: 50%;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #123151;
+}
+
+/* Professores */
+
+.conteudo-sobre .Orientadores {
+    margin-bottom: 40px;
+}
+
+/* Mensagem final */
+
+.conteudo-sobre .MensagemFinal {
+    border-top: 1px solid #385574;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.conteudo-sobre .MensagemFinal h2 {
+    color: #b7d4ff;
+    max-width: 900px;
+    font-size: 27px;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .conteudo-sobre {
+        padding: 20px;
+    }
+
+    .conteudo-sobre .SobreNos h1 {
+        font-size: 32px;
+    }
+
+    .conteudo-sobre .etapa {
+        gap: 12px;
+        padding-left: 15px;
+    }
+
+    .conteudo-sobre .cabecalho h2 {
+        font-size: 23px;
+    }
 }
