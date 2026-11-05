@@ -16,44 +16,36 @@
     <div class="desktop">
 
         <!-- Ícone Habilidades -->
-
         <div class="icone" onclick="abrir('Habilidades')">
             <p class="emoji">💻</p>
             <p class="nome-icone">Habilidades</p>
         </div>
 
-        <!-- Ícone Sobre mim -->
-
-       <!-- Ícone Sobre Nós -->
-
+        <!-- Ícone Sobre Nós -->
         <div class="icone" onclick="abrir('Sobre Nós')">
-             <p class="emoji">📄</p>
-             <p class="nome-icone">Sobre Nós</p>
+            <p class="emoji">📄</p>
+            <p class="nome-icone">Sobre Nós</p>
         </div>
 
         <!-- Ícone Projetos -->
-
         <div class="icone" onclick="abrir('Projetos')">
             <p class="emoji">📁</p>
             <p class="nome-icone">Projetos</p>
         </div>
 
         <!-- Ícone Contato -->
-
         <div class="icone" onclick="abrir('Contato')">
             <p class="emoji">✉️</p>
             <p class="nome-icone">Contato</p>
         </div>
 
         <!-- Ícone Leia-me -->
-
         <div class="icone" onclick="abrir('Leia-me')">
             <p class="emoji">📃</p>
             <p class="nome-icone">Leia-me</p>
         </div>
 
         <!-- Cartão de apresentação -->
-
         <div class="aviso">
             <h3>Olá! Nós somos o Codifica do Anglo!</h3>
             <p>Estudantes de programação e tecnologia.</p>
@@ -61,15 +53,13 @@
         </div>
 
         <!-- Janela original do portfólio -->
-
         <div id="janela" class="janela">
             <button onclick="fechar()">X</button>
             <h2 id="titulo"></h2>
             <p id="texto"></p>
         </div>
 
-        <!-- Nova janela SOBRE NÓS -->
-
+        <!-- Janela SOBRE NÓS -->
         <div id="janelaSobre" class="janela-sobre">
 
             <div class="conteudo-sobre">
@@ -226,12 +216,227 @@
             </div>
         </div>
 
+        <!-- NOVA JANELA CONTATO -->
+        <div id="janelaContato" class="janela-sobre">
+
+            <div class="conteudo-sobre contato-conteudo">
+
+                <button class="fechar-sobre" onclick="fecharContato()">X</button>
+
+                <!-- CABEÇALHO -->
+                <header class="contato-header">
+
+                    <div class="contato-logo">
+                        <div class="contato-icone-casa">⌂</div>
+
+                        <div>
+                            <p>PROJETO CODIFICA</p>
+                            <h3>Anglo Porto Alegre</h3>
+                        </div>
+                    </div>
+
+                    <a href="#contato-cartoes" class="contato-botao">
+                        Contatos
+                    </a>
+
+                </header>
+
+                <!-- APRESENTAÇÃO -->
+                <section class="contato-inicio">
+
+                    <div class="contato-apresentacao">
+
+                        <p class="contato-subtitulo">— FALE COM A GENTE</p>
+
+                        <h1>
+                            Educação e tecnologia<br>
+                            construindo o futuro.
+                        </h1>
+
+                        <p class="contato-descricao">
+                            Somos alunos do Colégio Anglo e estamos desenvolvendo
+                            um projeto nas aulas de Codifica. Aqui você encontra
+                            todos os canais para entrar em contato com a escola
+                            e com nossos professores.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- CARTÕES DE CONTATO -->
+                <section class="contato-cartoes" id="contato-cartoes">
+
+                    <!-- CARTÃO DO ANGLO -->
+                    <div class="contato-cartao">
+
+                        <div class="contato-titulo-cartao">
+                            <div class="contato-icone">⌂</div>
+
+                            <div>
+                                <p>NOSSA ESCOLA</p>
+                                <h2>Colégio Anglo</h2>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="contato-informacao">
+                            <div class="contato-icone-pequeno">📍</div>
+
+                            <div>
+                                <span>ENDEREÇO</span>
+                                <p>Carlos Gomes, 465 – Porto Alegre</p>
+                            </div>
+                        </div>
+
+                        <div class="contato-informacao">
+                            <div class="contato-icone-pequeno">☎</div>
+
+                            <div>
+                                <span>TELEFONE</span>
+                                <p>(51) 99378-2884</p>
+                            </div>
+
+                            <a href="tel:51993782884">→</a>
+                        </div>
+
+                    </div>
+
+                    <!-- CARTÃO DA CODIFICA -->
+                    <div class="contato-cartao">
+
+                        <div class="contato-titulo-cartao">
+                            <div class="contato-icone contato-azul">▤</div>
+
+                            <div>
+                                <p>EMPRESA PARCEIRA</p>
+                                <h2>Codifica</h2>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="contato-informacao">
+                            <div class="contato-icone-pequeno">☎</div>
+
+                            <div>
+                                <span>TELEFONE</span>
+                                <p>(51) 99452-1683</p>
+                            </div>
+
+                            <a href="tel:51994521683">→</a>
+                        </div>
+
+                        <div class="contato-informacao">
+                            <div class="contato-icone-pequeno">◎</div>
+
+                            <div>
+                                <span>SITE</span>
+                                <p>codificaedu.com.br</p>
+                            </div>
+
+                            <a href="https://codificaedu.com.br"
+                               target="_blank"
+                               rel="noopener noreferrer">→</a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- PROFESSORES -->
+                <section class="contato-professores">
+
+                    <div class="contato-titulo-professores">
+                        <p>EQUIPE CODIFICA</p>
+
+                        <h1>Nossos professores</h1>
+
+                        <span>
+                            Entre em contato com os professores responsáveis pelas aulas
+                            e pelo acompanhamento do projeto.
+                        </span>
+                    </div>
+
+                    <div class="contato-lista-professores">
+
+                        <!-- PROFESSOR GUILHERME -->
+                        <div class="contato-professor">
+
+                            <div class="contato-dados-professor">
+
+                                <div class="contato-iniciais">
+                                    GG
+                                </div>
+
+                                <div>
+                                    <span>PROFESSOR(A)</span>
+                                    <h3>Guilherme Guimarães</h3>
+                                </div>
+
+                            </div>
+
+                            <a href="mailto:guilhermeguimaraes@codificaedu.com.br"
+                               class="contato-email">
+
+                                <span>✉</span>
+
+                                <p>guilhermeguimaraes@codificaedu.com.br</p>
+
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                        <!-- PROFESSORA BRENDA -->
+                        <div class="contato-professor">
+
+                            <div class="contato-dados-professor">
+
+                                <div class="contato-iniciais">
+                                    BC
+                                </div>
+
+                                <div>
+                                    <span>PROFESSOR(A)</span>
+                                    <h3>Brenda Charão</h3>
+                                </div>
+
+                            </div>
+
+                            <a href="mailto:brendacharao@codificaedu.com.br"
+                               class="contato-email">
+
+                                <span>✉</span>
+
+                                <p>brendacharao@codificaedu.com.br</p>
+
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- RODAPÉ -->
+                <footer class="contato-rodape">
+                    <p>Projeto dos alunos do Colégio Anglo</p>
+                    <span>Desenvolvido nas aulas de Codifica</span>
+                </footer>
+
+            </div>
+        </div>
+
         <div class="nome">ANGLO CODIFICA</div>
 
     </div>
 
     <!-- Barra inferior -->
-
     <div class="barra">
         <button onclick="abrir('Início')">⊞ Iniciar</button>
         <p id="relogio"></p>
