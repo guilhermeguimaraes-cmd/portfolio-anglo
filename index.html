@@ -1,448 +1,387 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anglo Codifica</title>
-    <link rel="icon" href="logo_anglo.jpg" type="icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos do Ano</title>
+
+<style>
+:root {
+    --azul-escuro: #174A8B;
+    --azul-claro: #65A9E0;
+    --azul-medio: #2878BD;
+    --branco-azulado: #EAF4FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--azul-claro);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: var(--azul-escuro);
+}
+
+.janela {
+    max-width: 950px;
+    margin: auto;
+    background: var(--branco-azulado);
+    border: 3px solid var(--azul-escuro);
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 4px 5px 0 var(--azul-escuro);
+}
+
+.conteudo {
+    padding: 18px;
+}
+
+.instrucao {
+    font-family: monospace;
+    margin-bottom: 20px;
+    color: var(--azul-escuro);
+}
+
+.card {
+    background: var(--branco-azulado);
+    border: 2px solid var(--azul-escuro);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 0 var(--azul-escuro);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    background: var(--azul-claro);
+}
+
+.icone {
+    min-width: 50px;
+    height: 50px;
+    background: var(--azul-claro);
+    border: 2px solid var(--azul-escuro);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 7px;
+}
+
+.titulo h3 {
+    font-size: 19px;
+    color: var(--azul-escuro);
+}
+
+.arquivo {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--azul-medio);
+}
+
+.descricao {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    background: var(--azul-claro);
+    border: 1px solid var(--azul-medio);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--azul-escuro);
+}
+
+/* LINKS DOS PROJETOS */
+
+.links-jogos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.link-jogo {
+    text-decoration: none;
+    color: var(--azul-escuro);
+    background: var(--azul-claro);
+    border: 1px solid var(--azul-medio);
+    border-radius: 20px;
+    padding: 6px 13px;
+    font-family: monospace;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.link-jogo:hover {
+    background: var(--azul-escuro);
+    color: var(--branco-azulado);
+    transform: translateY(-2px);
+}
+
+.seta {
+    font-size: 28px;
+    color: var(--azul-medio);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .conteudo {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .titulo h3 {
+        font-size: 16px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .icone {
+        min-width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .seta {
+        font-size: 23px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="desktop">
+<div class="janela">
 
-        <!-- Ícone Habilidades -->
-        <div class="icone" onclick="abrir('Habilidades')">
-            <p class="emoji">💻</p>
-            <p class="nome-icone">Habilidades</p>
-        </div>
+    <div class="conteudo">
 
-        <!-- Ícone Sobre Nós -->
-        <div class="icone" onclick="abrir('Sobre Nós')">
-            <p class="emoji">📄</p>
-            <p class="nome-icone">Sobre Nós</p>
-        </div>
+        <!-- PROJETO 1 -->
+        <section class="card">
+            <div class="icone">🎮</div>
 
-        <!-- Ícone Projetos -->
-        <div class="icone" onclick="abrir('Projetos')">
-            <p class="emoji">📁</p>
-            <p class="nome-icone">Projetos</p>
-        </div>
-
-        <!-- Ícone Contato -->
-        <div class="icone" onclick="abrir('Contato')">
-            <p class="emoji">✉️</p>
-            <p class="nome-icone">Contato</p>
-        </div>
-
-        <!-- Ícone Leia-me -->
-        <div class="icone" onclick="abrir('Leia-me')">
-            <p class="emoji">📃</p>
-            <p class="nome-icone">Leia-me</p>
-        </div>
-
-        <!-- Cartão de apresentação -->
-        <div class="aviso">
-            <h3>Olá! Nós somos o Codifica do Anglo!</h3>
-            <p>Estudantes de programação e tecnologia.</p>
-            <p>Clique nos ícones para nos conhecer!</p>
-        </div>
-
-        <!-- Janela original do portfólio -->
-        <div id="janela" class="janela">
-            <button onclick="fechar()">X</button>
-            <h2 id="titulo"></h2>
-            <p id="texto"></p>
-        </div>
-
-        <!-- Janela SOBRE NÓS -->
-        <div id="janelaSobre" class="janela-sobre">
-
-            <div class="conteudo-sobre">
-
-                <button class="fechar-sobre" onclick="fecharSobre()">X</button>
-
-                <div class="cabecalho">
-
-                    <div class="SobreNos">
-                        <h3 class="subtitulo">SOBRE NÓS</h3>
-                        <h1>Nossa turma do Codifica.</h1>
-
-                        <p>
-                            Alunos de diferentes turmas que, juntos, construíram uma
-                            relação de amizade, respeito e colaboração.
-                        </p>
-
-                        <p>
-                            Somos diferentes, mas compartilhamos o mesmo propósito:
-                            aprender, crescer e construir algo juntos.
-                        </p>
-                    </div>
-
-                    <div class="QuemSomos">
-                        <h4>QUEM SOMOS</h4>
-
-                        <h2>Diferentes ideias, um só time</h2>
-
-                        <p>
-                            Nossa turma se destaca pela união, pela troca de ideias e
-                            pela disposição em ajudar uns aos outros. Mesmo com nossas
-                            diferenças, aprendemos que trabalhar em equipe torna tudo
-                            mais fácil e divertido.
-                        </p>
-
-                        <p>
-                            O Codifica é muito mais do que aprender programação: é um
-                            espaço de criatividade, amizade e crescimento, onde
-                            aprendemos com nossos erros e transformamos ideias em projetos.
-                        </p>
-
-                        <div class="valores">
-                            <span>União</span>
-                            <span>Respeito</span>
-                            <span>Criatividade</span>
-                            <span>Colaboração</span>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="NossaTrajetoria">
-                        <h4>NOSSA TRAJETÓRIA</h4>
-
-                        <h2>Uma etapa de cada vez</h2>
-
-                        <p>
-                            Dos primeiros jogos ao portfólio oficial, cada experiência
-                            ajudou a construir quem somos hoje.
-                        </p>
-                    </div>
-
-                    <div class="linhaTempo">
-
-                        <div class="etapa">
-                            <span class="numero">01</span>
-
-                            <div>
-                                <h4>O INÍCIO</h4>
-                                <h3>Primeiros passos com jogos</h3>
-
-                                <p>
-                                    No início do curso, nosso aprendizado foi focado no
-                                    desenvolvimento de jogos. Progredimos passo a passo,
-                                    conhecendo novas ferramentas e possibilidades, até
-                                    chegarmos à criação de um projeto final.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="etapa">
-                            <span class="numero">02</span>
-
-                            <div>
-                                <h4>EM PARALELO</h4>
-                                <h3>Do design aos sites</h3>
-
-                                <p>
-                                    Ao mesmo tempo, estudamos técnicas de design para dar
-                                    vida à identidade visual de uma marca. Com esse novo
-                                    olhar criativo, avançamos também para o desenvolvimento
-                                    de sites.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="etapa">
-                            <span class="numero">03</span>
-
-                            <div>
-                                <h4>SEGUNDO SEMESTRE</h4>
-                                <h3>Conhecimentos que se encontram</h3>
-
-                                <p>
-                                    No segundo semestre, a oficina e a área de ênfase
-                                    uniram forças para expandir nossos conhecimentos.
-                                    Essa integração nos permitiu reunir a programação que
-                                    já dominávamos graças aos jogos aos conceitos de
-                                    design aprendidos na criação dos sites.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="etapa">
-                            <span class="numero">04</span>
-
-                            <div>
-                                <h4>NOVO CAPÍTULO</h4>
-                                <h3>O portfólio da turma</h3>
-
-                                <p>
-                                    Com toda essa bagagem combinada, iniciamos o
-                                    desenvolvimento do portfólio oficial da turma:
-                                    um projeto que representa nossa trajetória, nossos
-                                    aprendizados e tudo o que somos capazes de criar juntos.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <hr>
-
-                    <div class="Orientadores">
-                        <h4>QUEM NOS ORIENTA</h4>
-
-                        <h2>Brenda Charão e Guilherme Guimarães</h2>
-
-                        <p>
-                            Contamos com o apoio dos professores, que nos orientam,
-                            ensinam e incentivam a superar dificuldades e descobrir
-                            novas possibilidades.
-                        </p>
-                    </div>
-
-                    <div class="MensagemFinal">
-                        <h2>
-                            “Somos alunos diferentes, unidos pelo mesmo propósito:
-                            aprender, crescer e construir algo juntos.”
-                        </h2>
-                    </div>
-
+            <div class="texto">
+                <div class="titulo">
+                    <h3>Desenvolvimento de Jogos 2D</h3>
+                    <span class="arquivo">jogos-2d.md</span>
                 </div>
-            </div>
-        </div>
 
-        <!-- NOVA JANELA CONTATO -->
-        <div id="janelaContato" class="janela-sobre">
+                <p class="descricao">
+                    Ao longo do ano, desenvolvemos alguns jogos 2D
+                    buscando criar experiências que fossem além de
+                    simplesmente jogar, trazendo realidade e emoção
+                    através dos cenários, personagens e interações.
+                </p>
 
-            <div class="conteudo-sobre contato-conteudo">
+                <div class="tags">
+                    <span class="tag">Criatividade</span>
+                    <span class="tag">Jogos 2D</span>
+                    <span class="tag">Design</span>
+                </div>
 
-                <button class="fechar-sobre" onclick="fecharContato()">X</button>
-
-                <!-- CABEÇALHO -->
-                <header class="contato-header">
-
-                    <div class="contato-logo">
-                        <div class="contato-icone-casa">⌂</div>
-
-                        <div>
-                            <p>PROJETO CODIFICA</p>
-                            <h3>Anglo Porto Alegre</h3>
-                        </div>
-                    </div>
-
-                    <a href="#contato-cartoes" class="contato-botao">
-                        Contatos
+                <div class="links-jogos">
+                    <a class="link-jogo"
+                       href="https://bernardo-oliveria.itch.io/scape-the-big-nose"
+                       target="_blank" rel="noopener noreferrer">
+                        Scape the Big Nose ↗
                     </a>
 
-                </header>
+                    <a class="link-jogo"
+                       href="https://bernardo-oliveria.itch.io/roar-run"
+                       target="_blank" rel="noopener noreferrer">
+                        Roar Run ↗
+                    </a>
 
-                <!-- APRESENTAÇÃO -->
-                <section class="contato-inicio">
-
-                    <div class="contato-apresentacao">
-
-                        <p class="contato-subtitulo">— FALE COM A GENTE</p>
-
-                        <h1>
-                            Educação e tecnologia<br>
-                            construindo o futuro.
-                        </h1>
-
-                        <p class="contato-descricao">
-                            Somos alunos do Colégio Anglo e estamos desenvolvendo
-                            um projeto nas aulas de Codifica. Aqui você encontra
-                            todos os canais para entrar em contato com a escola
-                            e com nossos professores.
-                        </p>
-
-                    </div>
-
-                </section>
-
-                <!-- CARTÕES DE CONTATO -->
-                <section class="contato-cartoes" id="contato-cartoes">
-
-                    <!-- CARTÃO DO ANGLO -->
-                    <div class="contato-cartao">
-
-                        <div class="contato-titulo-cartao">
-                            <div class="contato-icone">⌂</div>
-
-                            <div>
-                                <p>NOSSA ESCOLA</p>
-                                <h2>Colégio Anglo</h2>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <div class="contato-informacao">
-                            <div class="contato-icone-pequeno">📍</div>
-
-                            <div>
-                                <span>ENDEREÇO</span>
-                                <p>Carlos Gomes, 465 – Porto Alegre</p>
-                            </div>
-                        </div>
-
-                        <div class="contato-informacao">
-                            <div class="contato-icone-pequeno">☎</div>
-
-                            <div>
-                                <span>TELEFONE</span>
-                                <p>(51) 99378-2884</p>
-                            </div>
-
-                            <a href="tel:51993782884">→</a>
-                        </div>
-
-                    </div>
-
-                    <!-- CARTÃO DA CODIFICA -->
-                    <div class="contato-cartao">
-
-                        <div class="contato-titulo-cartao">
-                            <div class="contato-icone contato-azul">▤</div>
-
-                            <div>
-                                <p>EMPRESA PARCEIRA</p>
-                                <h2>Codifica</h2>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <div class="contato-informacao">
-                            <div class="contato-icone-pequeno">☎</div>
-
-                            <div>
-                                <span>TELEFONE</span>
-                                <p>(51) 99452-1683</p>
-                            </div>
-
-                            <a href="tel:51994521683">→</a>
-                        </div>
-
-                        <div class="contato-informacao">
-                            <div class="contato-icone-pequeno">◎</div>
-
-                            <div>
-                                <span>SITE</span>
-                                <p>codificaedu.com.br</p>
-                            </div>
-
-                            <a href="https://codificaedu.com.br"
-                               target="_blank"
-                               rel="noopener noreferrer">→</a>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- PROFESSORES -->
-                <section class="contato-professores">
-
-                    <div class="contato-titulo-professores">
-                        <p>EQUIPE CODIFICA</p>
-
-                        <h1>Nossos professores</h1>
-
-                        <span>
-                            Entre em contato com os professores responsáveis pelas aulas
-                            e pelo acompanhamento do projeto.
-                        </span>
-                    </div>
-
-                    <div class="contato-lista-professores">
-
-                        <!-- PROFESSOR GUILHERME -->
-                        <div class="contato-professor">
-
-                            <div class="contato-dados-professor">
-
-                                <div class="contato-iniciais">
-                                    GG
-                                </div>
-
-                                <div>
-                                    <span>PROFESSOR(A)</span>
-                                    <h3>Guilherme Guimarães</h3>
-                                </div>
-
-                            </div>
-
-                            <a href="mailto:guilhermeguimaraes@codificaedu.com.br"
-                               class="contato-email">
-
-                                <span>✉</span>
-
-                                <p>guilhermeguimaraes@codificaedu.com.br</p>
-
-                                <span>→</span>
-
-                            </a>
-
-                        </div>
-
-                        <!-- PROFESSORA BRENDA -->
-                        <div class="contato-professor">
-
-                            <div class="contato-dados-professor">
-
-                                <div class="contato-iniciais">
-                                    BC
-                                </div>
-
-                                <div>
-                                    <span>PROFESSOR(A)</span>
-                                    <h3>Brenda Charão</h3>
-                                </div>
-
-                            </div>
-
-                            <a href="mailto:brendacharao@codificaedu.com.br"
-                               class="contato-email">
-
-                                <span>✉</span>
-
-                                <p>brendacharao@codificaedu.com.br</p>
-
-                                <span>→</span>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- RODAPÉ -->
-                <footer class="contato-rodape">
-                    <p>Projeto dos alunos do Colégio Anglo</p>
-                    <span>Desenvolvido nas aulas de Codifica</span>
-                </footer>
-
+                    <a class="link-jogo"
+                       href="https://bernardo-oliveria.itch.io/monkeyrun"
+                       target="_blank" rel="noopener noreferrer">
+                        Monkeyrun ↗
+                    </a>
+                </div>
             </div>
+
+            <span class="seta">›</span>
+        </section>
+
+        
+<!-- PROJETO 2: CANVA -->
+<section class="card">
+    <div class="icone">🎨</div>
+
+    <div class="texto">
+        <div class="titulo">
+            <h3>Apresentação no Canva</h3>
+            <span class="arquivo">apresentacao-canva.md</span>
         </div>
 
-        <div class="nome">ANGLO CODIFICA</div>
+        <p class="descricao">
+            Desenvolvemos uma apresentação visual utilizando
+            o Canva para organizar nossas ideias e apresentar
+            os projetos de forma criativa e organizada,
+            explorando recursos de design e comunicação visual.
+        </p>
 
+        <div class="tags">
+            <span class="tag">Canva</span>
+            <span class="tag">Design</span>
+            <span class="tag">Apresentação</span>
+        </div>
+
+        <div class="links-jogos">
+            <a class="link-jogo"
+               href="https://canva.link/68y02ylww6a213l"
+               target="_blank"
+               rel="noopener noreferrer">
+                Abrir apresentação no Canva ↗
+            </a>
+        </div>
     </div>
 
-    <!-- Barra inferior -->
-    <div class="barra">
-        <button onclick="abrir('Início')">⊞ Iniciar</button>
-        <p id="relogio"></p>
-    </div>
+    <span class="seta">›</span>
+</section>
 
-    <script src="script.js"></script>
+            <span class="seta">›</span>
+        </section>
+
+        <!-- PROJETO 3 -->
+        <section class="card">
+            <div class="icone">💻</div>
+
+            <div class="texto">
+                <div class="titulo">
+                    <h3>Desenvolvimento Web</h3>
+                    <span class="arquivo">desenvolvimento-web.md</span>
+                </div>
+
+                <p class="descricao">
+                    No segundo semestre, nosso foco foi aprender
+                    HTML, CSS e JavaScript. Conhecemos melhor essas
+                    tecnologias e entendemos como cada uma funciona
+                    no desenvolvimento de páginas e aplicações.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+            <span class="seta">›</span>
+        </section>
+
+        <!-- PROJETO 4 -->
+        <section class="card">
+            <div class="icone">📁</div>
+
+            <div class="texto">
+                <div class="titulo">
+                    <h3>Criação do Portfólio</h3>
+                    <span class="arquivo">portfolio.md</span>
+                </div>
+
+                <p class="descricao">
+                    Criamos um portfólio para reunir e apresentar
+                    tudo o que produzimos durante o ano. Utilizamos
+                    HTML para estruturar o conteúdo, CSS para o visual
+                    e JavaScript para adicionar interatividade.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Portfólio</span>
+                </div>
+            </div>
+
+            <span class="seta">›</span>
+        </section>
+
+        <!-- PROJETO 5: CANVA -->
+        <section class="card">
+            <div class="icone">🎨</div>
+
+            <div class="texto">
+                <div class="titulo">
+                    <h3>Apresentação no Canva</h3>
+                    <span class="arquivo">apresentacao-canva.md</span>
+                </div>
+
+                <p class="descricao">
+                    Desenvolvemos uma apresentação visual utilizando
+                    o Canva para organizar nossas ideias e apresentar
+                    os projetos de forma criativa e organizada,
+                    explorando recursos de design e comunicação visual.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Canva</span>
+                    <span class="tag">Design</span>
+                    <span class="tag">Apresentação</span>
+                </div>
+
+                <div class="links-jogos">
+                    <a class="link-jogo"
+                       href="https://www.canva.com/design/DAHM61epa9k/0Q9WPnUdHmFFTOil3AHb3A/edit"
+                       target="_blank" rel="noopener noreferrer">
+                        Abrir apresentação no Canva ↗
+                    </a>
+                </div>
+            </div>
+
+            <span class="seta">›</span>
+        </section>
+
+        <p class="instrucao" style="margin-top:20px; margin-bottom:0;">
+            ~/fim-da-trajetoria — Um ano de criatividade e aprendizado.
+        </p>
+
+    </div>
+</div>
 
 </body>
 </html>
+
+
+
